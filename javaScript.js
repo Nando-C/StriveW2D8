@@ -68,5 +68,10 @@ const getTasksAsArray = function(){
                onchange event listener ad applies it as background to every list item
             */
 const changeTaskBackgroundColor = function(){
+    let newColor = document.getElementById('colorPicker').value
+    let list = document.querySelectorAll('li')
+    for(let i=0; i<list.length; i++){
+        list[i].style.backgroundColor = newColor
+    }
 
 }
