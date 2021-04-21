@@ -1,28 +1,55 @@
-# StriveW2D8
-<!-- EXERCISE 1:
+<!DOCTYPE html>
+<!-- saved from url=(0436)https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/141421607213223.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2TAWW44RDWPS6YGR%2F20210421%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210421T121059Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27M1-D8.html&X-Amz-Signature=e351b15b5091c0f7a076ac5675a23decb1e26bf69a633c9639551d7fbf7b8d69 -->
+<html lang="en"><head><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- EXERCISE 1:
     Specify the title, the charset (UTF-8) and the viewport of the page.
     -->
- /* EXERCISE 2:  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework - Day 8</title>
+<!--     
+    <style>
+      /* EXERCISE 2:  
        Create a CSS class for the task list with a diverse background
        Create a CSS class for the task list item with a border, a bold text and a bigger font size
        Style every button of the page to be bigger
-    */    
+    */
+    </style> -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Welcome to your personal Task List!</h1>
+    <br>
+
+    <span>You can add any task you like by writing it in the specified field and
+      then press "Add new task"</span><br><br>
+
+    <input type="text" id="newTask">
+    <input class="button" type="button" value="Add new Task" onclick="addNewTask()">
 
     <!-- EXERCISE 3
         Create a button "Remove Last Task" to trigger the method "removeLast"
         -->
+    <button onclick="removeLast()">Remove Last Task</button>
 
     <!-- EXERCISE 4
         Create a button "Remove First Task" to trigger the method "removeFirst"
         -->
-            <!-- EXERCISE 3
-        Create a button "Remove Last Task" to trigger the method "removeLast"
-        -->
+    <button onclick="removeFirst()">Remove First Task</button>
 
-    <!-- EXERCISE 4
-        Create a button "Remove First Task" to trigger the method "removeFirst"
-        -->
+    <ul id="myTaskList"></ul>
 
+    <hr>
+
+    <input type="color" placeholder="Color" id="colorPicker">
+    <input class="button" type="button" value="Change task background" onclick="changeTaskBackgroundColor()">
+
+    <hr>
+
+    <input class="button" type="button" value="Sort" onclick="bubblesort()">
+    <script src="javaScript.js"></script>
+<!-- 
+    <script> 
       /* EXERCISE 5: 
                 Add a new task to the list.
                 Suggestion:
@@ -59,3 +86,7 @@
                - Break the code into many function for semplicity 
                - Reuse the functions previously created
             */
+    </script> -->
+  
+
+</body></html>
