@@ -6,15 +6,16 @@ background: radial-gradient(circle, rgba(3,204,249,1) 13%, rgba(45,94,127,1) 36%
 }
 
 .item {
-    border: solid;
+    border: 1px solid rgb(78, 230, 230);;
     border-radius: 0.5em;
-    border-color: rgb(78, 230, 230);
+    /* border-color: rgb(78, 230, 230); */
     padding: 0.5em;
     font-size: x-large;
     font-weight: bold;
     color: rgb(16, 78, 78);
 }
 
-button , .button{
-    block-size: 3em;
+input[type='button'] {
+    padding: 15px;
+    font-size: 1.5em;
 }

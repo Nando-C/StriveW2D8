@@ -15,12 +15,12 @@
 // }
 
 /* EXERCISE 5: 
-                Add a new task to the list.
-                Suggestion:
-                - Use document.getElementById to get the UL item and the input text
-                - Use the document.createElement to create the new List Item
-                - Append the child to the UL
-            */
+    Add a new task to the list.
+    Suggestion:
+    - Use document.getElementById to get the UL item and the input text
+    - Use the document.createElement to create the new List Item
+    - Append the child to the UL
+*/
 const addNewTask = function(){
     let parentUl = document.getElementById('myTaskList')
     let task = document.getElementById('newTask')
@@ -32,8 +32,8 @@ const addNewTask = function(){
 }
 
 /* EXERCISE 6: 
-                Create a method "removeLast" which removes the last item from the task list
-            */
+Create a method "removeLast" which removes the last item from the task list
+ */
 const removeLast = function(){
     let list = document.getElementsByTagName('li')
     if(list[list.length-1]){
@@ -41,9 +41,9 @@ const removeLast = function(){
     }
 }
 
- /* EXERCISE 7: 
-                Create a method "removeFirst" which removes the first item from the task list
-            */
+/* EXERCISE 7: 
+Create a method "removeFirst" which removes the first item from the task list
+*/
 const removeFirst = function(){
     let list = document.getElementsByTagName('li')
     if(list[0]){
@@ -51,9 +51,9 @@ const removeFirst = function(){
     }
 }
 
-      /* EXERCISE 8: 
-               Create a method "getTasksAsArray" which returns, and prints to the console an array containing the tasks as string
-            */
+/* EXERCISE 8: 
+Create a method "getTasksAsArray" which returns, and prints to the console an array containing the tasks as string
+*/
 const getTasksAsArray = function(){
     let list = document.getElementsByTagName('li')
     let taskArray =[]
@@ -61,17 +61,46 @@ const getTasksAsArray = function(){
         taskArray.push(list[i].innerText)
     }
     console.log(taskArray)
+    return taskArray
 }
 
-      /* EXERCISE 9:
-               Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an 
-               onchange event listener ad applies it as background to every list item
-            */
+/* EXERCISE 9:
+Create a method "changeTaskBackgroundColor" which takes the color from the color picker with an 
+onchange event listener ad applies it as background to every list item
+*/
+
 const changeTaskBackgroundColor = function(){
     let newColor = document.getElementById('colorPicker').value
     let list = document.querySelectorAll('li')
     for(let i=0; i<list.length; i++){
         list[i].style.backgroundColor = newColor
     }
+}
 
+/* EXERCISE 10: 
+Create a method "bubbleSort()" which sort the task list alphabetically using the bubble sort algorithm
+            
+Use your spare time to beautify your task list via CSS.
+
+Suggestion:
+- Break the code into many function for semplicity 
+- Reuse the functions previously created
+ */
+const bubbleSort = function(){
+    let list = getTasksAsArray()
+    let c = list.length
+    let flag = true
+    while(flag === true){
+        flag === false
+        for(let i=0; i<c; i++){
+            if(list[i].localeCompare(list[i+1]) === 1) {
+                console.log(list[i+1])
+                let temp = list[i]
+                list[i] = list[i+1]
+                list[i+1] = temp
+                flag === true
+            }
+        }
+    }
+    console.log(list)
 }
